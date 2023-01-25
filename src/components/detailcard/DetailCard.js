@@ -110,7 +110,7 @@ const DetailCard = () => {
             <p className="detailCardNameP">{character.name}</p>
         </div>
         <div  className="detailCardTypeCardDiv">
-        {character.types.map((singleType, index) => {
+        {character.types.forEach((singleType, index) => {
             for (const [key, value] of Object.entries(colorsDetailCard)) {
                 if (value.type === singleType.type.name) {
                     let typeColor = value.color;
